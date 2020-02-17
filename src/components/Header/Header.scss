@@ -1,0 +1,21 @@
+@import "./NavBar/NavBar.scss";
+
+header {
+  background: var(--grey);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    & > .logo {
+      grid-column: span 1 / auto;
+      justify-self: center;
+    }
+  }
+}
