@@ -12,28 +12,28 @@ import "./SideNav.scss";
 import NavItem from "./SideNavItem";
 
 const SideNav = () => {
-  let routes = {
-    home: {
+  const routes = [
+    {
       name: "Dashboard",
       icon: faHome,
-      path: "/admin/dashboard"
+      path: "/admin"
     },
-    user: {
+    {
       name: "Users",
       icon: faUser,
       path: "/admin/users"
     },
-    data: {
+    {
       name: "Data",
       icon: faChartLine,
       path: "/"
     },
-    settings: {
+    {
       name: "Settings",
       icon: faCog,
       path: "/"
     }
-  };
+  ];
 
   // Expanding Menu Handler
   const [menuExpanded, setMenuExpanded] = useState(false);
@@ -51,30 +51,15 @@ const SideNav = () => {
             fixedWidth
           />
         </li>
-        <NavItem
-          name={routes.home.name}
-          icon={routes.home.icon}
-          path={routes.home.path}
-          expanded={menuExpanded}
-        />
-        <NavItem
-          name={routes.user.name}
-          icon={routes.user.icon}
-          path={routes.user.path}
-          expanded={menuExpanded}
-        />
-        <NavItem
-          name={routes.data.name}
-          icon={routes.data.icon}
-          path={routes.data.path}
-          expanded={menuExpanded}
-        />
-        <NavItem
-          name={routes.settings.name}
-          icon={routes.settings.icon}
-          path={routes.settings.path}
-          expanded={menuExpanded}
-        />
+        {routes.map((route, idx) => (
+          <NavItem
+            key={idx}
+            name={route.name}
+            icon={route.icon}
+            path={route.path}
+            expanded={menuExpanded}
+          />
+        ))}
       </ul>
     </div>
   );

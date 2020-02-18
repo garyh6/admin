@@ -1,0 +1,10 @@
+.search-bar {
+  text-align: left;
+  display: flex;
+  flex-wrap: nowrap;
+  div {
+    padding-left: 20px;
+    background-color: yellow;
+    width: 100%;
+  }
+}

@@ -1,7 +1,13 @@
 import React from "react";
-
+import SearchBar from "../SearchBar";
 const Users = () => {
-  return <div></div>;
+  // search bar
+  // user card
+  return (
+    <div>
+      <SearchBar></SearchBar>
+    </div>
+  );
 };
 
 export default Users;

@@ -4,5 +4,6 @@
   bottom: 0;
   left: 0;
   background: #c7edff;
-  transition: width 2s;
+  min-width: 46px;
+  z-index: 999;
 }
