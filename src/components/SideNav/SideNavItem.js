@@ -9,21 +9,16 @@ const NavItem = ({ icon, name, path, expanded }) => {
       className={`sidenav__item ${expanded ? "sidenav__item--expanded" : ""}`}
     >
       <Link to={path}>
-        <FontAwesomeIcon icon={icon} size="lg" fixedWidth />
+        <FontAwesomeIcon
+          icon={icon}
+          size="lg"
+          fixedWidth
+          className="nav-item-icon"
+        />
         <label>{name}</label>
       </Link>
     </li>
   );
-
-  // return (
-  //   <li className="sidenav__item">
-  //     <Link to={path}>
-  //       <FontAwesomeIcon icon={icon} size="lg" fixedWidth />
-
-  //       {expanded ? <label>{name}</label> : null}
-  //     </Link>
-  //   </li>
-  // );
 };
 
 export default NavItem;

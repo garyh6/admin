@@ -5,14 +5,19 @@
   a {
     text-decoration: none;
     color: var(--black);
+    .nav-item-icon {
+      text-align: center;
+    }
     label {
+      padding-left: 0;
       cursor: pointer;
       opacity: 0;
       width: 0;
       display: inline-block;
       transform: scale(0, 1);
       transform-origin: left;
-      transition: opacity 500ms ease-in-out, width 300ms ease-in-out;
+      transition: opacity 250ms ease-in-out, transform 800ms ease-in-out,
+        width 400ms ease-in-out, padding-left 300ms linear;
     }
   }
 }
@@ -24,7 +29,10 @@
       opacity: 1;
       width: 100px;
       transform: scale(1, 1);
-      transition: opacity 500ms ease-in-out, width 300ms ease-in-out;
+      transform-origin: left;
+
+      transition: opacity 1700ms ease-in-out, transform 350ms ease-in-out,
+        width 350ms ease-in-out;
     }
   }
 }
