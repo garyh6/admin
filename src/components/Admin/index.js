@@ -8,14 +8,12 @@ import "./Admin.scss";
 const Admin = () => {
   return (
     <BrowserRouter>
-      <div>
-        <SideNav></SideNav>
-        <div className="admin-wrapper">
-          <Switch>
-            <Route path="/admin" exact component={Dashboard} />
-            <Route path="/admin/users" exact component={Users} />
-          </Switch>
-        </div>
+      <SideNav></SideNav>
+      <div className="admin-wrapper">
+        <Switch>
+          <Route path="/admin" exact component={Dashboard} />
+          <Route path="/admin/users" exact component={Users} />
+        </Switch>
       </div>
     </BrowserRouter>
   );

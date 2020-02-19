@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "../SearchBar";
 import UserCard from "./UserCard";
+import "./Users.scss";
 const Users = () => {
   // search bar
   // user card

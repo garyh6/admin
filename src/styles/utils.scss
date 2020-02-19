@@ -1,0 +1,32 @@
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+
+  &.center {
+    align-items: center;
+  }
+}
+
+.align-left {
+  text-align: left;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.border-right {
+  border-right: 2px solid var(--light);
+}
+
+.border-left {
+  border-left: 2px solid var(--light);
+}
+
+.border-top {
+  border-top: 2px solid var(--light);
+}
+
+.border-bottom {
+  border-bottom: 2px solid var(--light);
+}
