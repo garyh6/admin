@@ -14,7 +14,9 @@
     width: 100%;
 
     table {
+      margin-top: 25px;
       width: 100%;
+      table-layout: fixed;
     }
   }
 }

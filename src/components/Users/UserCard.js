@@ -5,7 +5,7 @@ const UserCard = () => {
   const verified = true;
   return (
     <div className="card-wrapper">
-      <Row type="flex" justify="center" align="middle">
+      <Row type="flex" justify="center" align="middle" className="mb-25 pt-25">
         <Col span={6} className="border-right">
           <div className="flex-vertical center">
             <img
@@ -13,12 +13,12 @@ const UserCard = () => {
               src={require("../../img/showcase.jpg")}
               alt="User Avatar"
             ></img>
-            <label>Gary Hsiao</label>
+            <label className="mt-25">Gary Hsiao</label>
           </div>
         </Col>
         <Col span={18}>
-          <div className="flex-vertical center">
-            <div className="align-left">
+          <div className="flex-vertical left">
+            <div className="align-left ml-25">
               <p>
                 <span className="bold">Email</span> {verified ? "check" : "x"}{" "}
                 gary@gary.com
