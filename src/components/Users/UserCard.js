@@ -1,6 +1,8 @@
 import { Col, Row } from "antd";
 import React from "react";
 import UserTable from "./UserTable";
+import { UserTableProvider } from "./UserTableContext";
+
 const UserCard = () => {
   const verified = true;
   return (
@@ -59,7 +61,9 @@ const UserCard = () => {
       </Row>
       <Row>
         <Col span={24}>
-          <UserTable></UserTable>
+          <UserTableProvider>
+            <UserTable></UserTable>
+          </UserTableProvider>
         </Col>
       </Row>
     </div>

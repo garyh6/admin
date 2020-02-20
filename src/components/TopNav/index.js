@@ -1,17 +1,17 @@
 import { Icon, Menu } from "antd";
-import React, { useState } from "react";
+import React from "react";
 const { SubMenu } = Menu;
 
-const TopNav = () => {
-  const [current, setCurrent] = useState("mail");
+const TopNav = props => {
+  const { activeTab, setActiveTab } = props;
 
   const handleClick = e => {
     console.log("click ", e);
-    setCurrent(e.key);
+    setActiveTab(e.key);
   };
 
   return (
-    <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+    <Menu onClick={handleClick} selectedKeys={[activeTab]} mode="horizontal">
       <Menu.Item key="mail">
         <Icon type="mail" />
         Navigation One

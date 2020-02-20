@@ -1,15 +1,32 @@
-import React from 'react'
-import {Table} from "antd"
-import {columns, data} from "../../demo-data/antd-table"
-import TopNav from '../TopNav'
+import { Table } from "antd";
+import React, { useContext } from "react";
+import TopNav from "../TopNav";
+import { UserTableContext } from "./UserTableContext";
 
 const UserTable = () => {
-  return (
-    <div>
-      <TopNav></TopNav>
-      <Table columns={columns} dataSource={data}></Table>
-    </div>
-  )
-}
+  const {
+    activeTab,
+    setActiveTab,
+    activeData: data,
+    activeColumns: columns,
+    isLoading
+  } = useContext(UserTableContext);
 
-export default UserTable
+  return (
+    <>
+      {isLoading ? (
+        <div>is loading</div>
+      ) : (
+        <>
+          <TopNav activeTab={activeTab} setActiveTab={setActiveTab}></TopNav>
+          <Table columns={columns} dataSource={data}></Table>
+          <p>
+            Last Updated: <span>XXXX-XX-XX XX:XX:XX</span>
+          </p>
+        </>
+      )}
+    </>
+  );
+};
+
+export default UserTable;
