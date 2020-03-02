@@ -16,7 +16,8 @@ const Register = () => {
       const res = await fetch(`http://localhost:4000/api/user/register`, {
         method: "POST",
         headers: new Headers({
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true
         }),
         body: JSON.stringify({
           email,
@@ -25,7 +26,6 @@ const Register = () => {
           lastName
         })
       });
-      console.log("************ var ", res);
       history.push("/admin");
     } catch (err) {
       console.log("************ Register err", err);

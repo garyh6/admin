@@ -1,14 +1,16 @@
 import "antd/dist/antd.css";
 import React from "react";
 import "./App.css";
+import AuthContext from "./contexts/AuthContext";
 import Routes from "./routes";
 import "./styles/utils.scss";
-
 function App() {
   return (
-    <div className="App">
-      <Routes />
-    </div>
+    <AuthContext>
+      <div className="App">
+        <Routes />
+      </div>
+    </AuthContext>
   );
 }
 

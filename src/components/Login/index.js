@@ -23,7 +23,6 @@ const Login = () => {
         }),
         credentials: "include"
       });
-      console.log("************ var ", res);
       history.push("/admin");
     } catch (err) {
       console.log("************ login err", err);

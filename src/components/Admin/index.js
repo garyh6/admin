@@ -1,18 +1,18 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Dashboard from "../Dashboard";
+import { BrowserRouter, Switch } from "react-router-dom";
+import { AuthRoute } from "../../routes/routes";
 import SideNav from "../SideNav";
-import Users from "../Users";
 import "./Admin.scss";
-
-const Admin = () => {
+const Admin = props => {
+  const { routes } = props;
   return (
     <BrowserRouter>
       <SideNav></SideNav>
       <div className="admin-wrapper">
         <Switch>
-          <Route path="/admin" exact component={Dashboard} />
-          <Route path="/admin/users" exact component={Users} />
+          {routes.map((route, idx) => (
+            <AuthRoute key={idx} {...route}></AuthRoute>
+          ))}
         </Switch>
       </div>
     </BrowserRouter>
